@@ -1,0 +1,31 @@
+.Lista {
+  padding: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Lista-taller {
+  border: 1px #e2e2e2 solid;
+  box-shadow: 5px 5px 3px #5d5d5d;
+  width: 50vw;  
+}
+
+.Lista-taller h3 {
+  color: #3390fa;
+}
+
+.Lista-taller div {
+  background: aliceblue;
+  text-align: left;
+  padding: 20px;
+}
+
+@media screen and (max-width: 720px){
+  .Lista-taller {
+    width: 100%;
+  }
+}

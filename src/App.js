@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import FormTaller from './components/FormTaller';
+import ListaTalleres from './components/ListaTalleres';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      lista : [{
+        name: 'Taller 1 React',
+        description: 'Estes es un taller chido, bueno no tanto.',
+        attendes: 10,
+      }],
+    };
+  }
+
+  addLista = (theNew) => {
+    this.setState({
+      lista : [...this.state.lista, theNew],
+    });
+  };
+
   render() {
+    const { lista } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>Tallerist</h1>
         </header>
+        <section>
+          <FormTaller addLista={this.addLista}/>
+        </section>
+        <section>
+          <ListaTalleres lista={lista}/>
+        </section>
       </div>
     );
   }

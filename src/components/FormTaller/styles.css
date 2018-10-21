@@ -1,0 +1,18 @@
+.Form {
+  background: #e2e2e2;
+  padding: 20px;
+  width: 100vw;
+}
+
+.Form-input {
+  border: none;
+  margin: 10px;
+  padding: 5px;
+}
+
+.Form-submit {
+  border: none;
+  background: #3caa00;
+  color: #fff;
+  padding: 5px 10px;
+}
